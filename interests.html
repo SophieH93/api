@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="aBEYNi6jNp7l9tN8zx_6JY8sQQCdcDpmaXKa8M76EnM" />
     <title>Rosie Odenkirk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
@@ -160,12 +161,19 @@
             </div>
         </div>
     </footer>
-    
-   
-    <script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js">
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeh54Ftxw2yvBFfmKUlIZ0PYvjhXXT7DQY&callback=initMap">
-    </script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"),{
+                zoom: 3,
+                center: {
+                    lat: 46.619261,
+                    lng: -33.134766
+                }
+            });
+        }
+    </script>   
+    <script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwhU8-wDRkhXyvwL37u4s74Sd5QIkKmKE&callback=initMap"></script>
 </body>
 
-</html>
+</html> 
