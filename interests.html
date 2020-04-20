@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="aBEYNi6jNp7l9tN8zx_6JY8sQQCdcDpmaXKa8M76EnM" />
+    <meta name="google-site-verification" content="aBEYNi6jNp7l9tN8zx_6JY8sQQCdcDpmaXKa8M76EnM"/>
     <title>Rosie Odenkirk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
@@ -170,10 +170,34 @@
                     lng: -33.134766
                 }
             });
-        }
+
+            var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+
+            var locations = [{
+                lat: 40.785091,
+                lng: -73.968285
+            }, {
+                lat: 41.084045,
+                lng: -73.874256
+            }, {
+                lat: 40.754932,
+                lng: -73.984016
+            }];
+            
+            var markers = locations.map(function(location, i){
+                return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length] 
+                });
+            });
+             var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+            
     </script>   
+    
     <script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwhU8-wDRkhXyvwL37u4s74Sd5QIkKmKE&callback=initMap"></script>
-</body>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqO4gjW4Xq0yIVwUXTNYot-Ee6D3uGxGs&callback=initMap"></script>
+</body> 
 
 </html> 
